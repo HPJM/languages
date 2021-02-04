@@ -13,11 +13,12 @@ defmodule Languages do
   defmacro __using__(_) do
     ast =
       for %{"code" => code, "name" => name, "native" => native} = language_code <- @codes do
+        code = code |> String.to_atom()
         rtl? = Map.has_key?(language_code, "rtl")
         language_code = %Language{name: name, code: code, rtl?: rtl?, native: native}
 
         quote do
-          def from_code(unquote(code |> String.to_atom())) do
+          def from_code(unquote(code)) do
             unquote(Macro.escape(language_code))
           end
 
