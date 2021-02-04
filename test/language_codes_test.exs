@@ -14,7 +14,7 @@ defmodule LanguagesTest do
     end
 
     test "it handles non-existent matches" do
-      assert ExampleModule.from_name(:nothing) == {:error, :invalid_name}
+      assert ExampleModule.from_code(:nothing) == {:error, :invalid_code}
     end
   end
 
@@ -24,7 +24,7 @@ defmodule LanguagesTest do
     end
 
     test "it handles non-existent matches" do
-      assert ExampleModule.from_name(:nothing) == {:error, :invalid_name}
+      assert ExampleModule.from_name("nothing") == {:error, :invalid_name}
     end
   end
 end
