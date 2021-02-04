@@ -1,10 +1,10 @@
-defmodule LanguageCodesTest do
+defmodule LanguagesTest do
   use ExUnit.Case
-  doctest LanguageCodes
-  alias LanguageCodes.Language
+  doctest Languages
+  alias Languages.Language
 
   defmodule ExampleModule do
-    use LanguageCodes
+    use Languages
   end
 
   describe "from_code/1" do

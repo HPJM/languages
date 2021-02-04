@@ -1,4 +1,4 @@
-defmodule LanguageCodes do
+defmodule Languages do
   @moduledoc """
   Allows querying of ISO codes for language name and codes.
   """
